@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MomentsBlog</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="main-container">
+  <div class="header_container_fixed">
+    <%= render partial: 'layouts/header'%>
+  </div>
+  <div class="mainbpart wrapperbpart clearfix">
+    <div class="main_content">
+      <%= yield %>      
+    </div>
+    <aside>
+      <%= render  partial: 'layouts/sidebar'%>
+    </aside>
+  </div>
+</div>
+
+
+</body>
+</html>
